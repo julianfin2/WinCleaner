@@ -1,0 +1,42 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg_gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00A4EF"/>
+      <stop offset="100%" stop-color="#0078D4"/>
+    </linearGradient>
+    <filter id="soft_glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- 背景圆角矩形 -->
+  <rect width="512" height="512" rx="112" fill="url(#bg_gradient)"/>
+
+  <!-- 扫帚主体 (倾斜 30度) -->
+  <g transform="translate(256, 256) rotate(-30) translate(-256, -256)">
+    <!-- 扫帚手柄 -->
+    <rect x="236" y="80" width="40" height="200" rx="20" fill="white"/>
+    
+    <!-- 扫帚头/刷柄连接处 -->
+    <path d="M160 280H352L362 320H150L160 280Z" fill="#F2F2F2"/>
+    
+    <!-- 刷毛细节 -->
+    <path d="M150 320L130 420H382L362 320H150Z" fill="white"/>
+    <!-- 刷毛间的缝隙感 -->
+    <line x1="180" y1="330" x2="170" y2="410" stroke="#0078D4" stroke-width="4" stroke-linecap="round" opacity="0.2"/>
+    <line x1="220" y1="330" x2="215" y2="410" stroke="#0078D4" stroke-width="4" stroke-linecap="round" opacity="0.2"/>
+    <line x1="260" y1="330" x2="260" y2="410" stroke="#0078D4" stroke-width="4" stroke-linecap="round" opacity="0.2"/>
+    <line x1="300" y1="330" x2="305" y2="410" stroke="#0078D4" stroke-width="4" stroke-linecap="round" opacity="0.2"/>
+    <line x1="340" y1="330" x2="350" y2="410" stroke="#0078D4" stroke-width="4" stroke-linecap="round" opacity="0.2"/>
+  </g>
+
+  <!-- 清理后的闪烁火花 -->
+  <g filter="url(#soft_glow)">
+    <path d="M400 120L410 150L440 160L410 170L400 200L390 170L360 160L390 150L400 120Z" fill="white"/>
+    <path d="M440 220L445 235L460 240L445 245L440 260L435 245L420 240L435 235L440 220Z" fill="white" opacity="0.8"/>
+  </g>
+
+  <!-- 扫过的动态弧线 -->
+  <path d="M100 400C150 450 350 450 420 380" stroke="white" stroke-width="12" stroke-linecap="round" opacity="0.4"/>
+</svg>

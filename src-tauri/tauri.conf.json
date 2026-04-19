@@ -1,8 +1,8 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "Win清理工具",
+  "productName": "WinCleaner",
   "version": "0.1.1",
-  "mainBinaryName": "Win清理工具",
+  "mainBinaryName": "WinCleaner",
   "identifier": "top.volan.win-cleaner",
   "build": {
     "beforeDevCommand": "pnpm dev",

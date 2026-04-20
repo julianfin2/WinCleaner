@@ -1,6 +1,6 @@
 [package]
 name = "win-cleaner"
-version = "0.1.1"
+version = "0.1.2"
 description = "A Windows Cleaner"
 authors = ["Julian"]
 edition = "2021"
@@ -35,4 +35,3 @@ windows-sys = { version = "0.59", features = [
     "Win32_Security",
     "Win32_System_SystemInformation"
 ] }
-
